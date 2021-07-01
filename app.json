@@ -12,10 +12,10 @@
     "website": "https://github.com/flashokiller",
     "success_url": "https://t.me/flashokiller_gacha",
     "env": {
-        "BOT_TOKEN": {
+        "TOKEN": {
             "description": "[BOT MODE] - Get this from https://t.me/botfather",
             "required": false},
-        "OWNER_ID": {
+        "OWNERID": {
             "description": "[BOT MODE] - Your user_id",
             "required": false},
         "OWNER_USERNAME": {
