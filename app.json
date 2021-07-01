@@ -1,0 +1,45 @@
+{
+    "name": "DISCORD BOT",
+    "description": "telegram pluggable userbot",
+    "logo": "https://imgur.com/download/Inyeb1S",
+    "keywords": [
+        "userge",
+        "telegram",
+        "pluggable",
+        "userbot"
+    ],
+    "repository": "https://github.com/flashokiller/Djs-Moderation-Bot",
+    "website": "https://github.com/flashokiller",
+    "success_url": "https://t.me/flashokiller_gacha",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "[BOT MODE] - Get this from https://t.me/botfather",
+            "required": false},
+        "OWNER_ID": {
+            "description": "[BOT MODE] - Your user_id",
+            "required": false},
+        "OWNER_USERNAME": {
+            "description": "given app name to the USE4NAME app",
+            "required": false},
+        "PREFIX": {
+            "description": "get a Heroku API key from http://dashboard.heroku.com/account",
+            "required": false}
+    },
+    "addons": [],
+    "buildpacks": [
+        {"url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"},
+        {"url": "https://github.com/HasibulKabir/heroku-buildpack-rarlab.git"},
+        {"url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip"},
+        {"url": "https://github.com/rking32/heroku-buildpack-google-chrome"},
+        {"url": "https://github.com/rking32/heroku-buildpack-chromedriver"},
+        {"url": "https://github.com/chrismytton/heroku-buildpack-jq.git"},
+        {"url": "https://github.com/heroku/heroku-buildpack-apt.git"},
+        {"url": "heroku/python"}
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
