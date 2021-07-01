@@ -1,8 +1,6 @@
 # We're using Debian Slim Buster image
 FROM python:3.8.5-slim-buster
 
-ENV PIP_NO_CACHE_DIR 1
-
 RUN sed -i.bak 's/us-west-2\.ec2\.//' /etc/apt/sources.list
 
 # Installing Required Packages
@@ -63,10 +61,12 @@ RUN apt update && apt upgrade -y && \
     && rm -rf /var/lib/apt/lists /var/cache/apt/archives /tmp
 
 # Pypi package Repo upgrade
-RUN pip3 install --upgrade pip setuptools
+RUN npm install --upgrade npm 
 
 #Copy config file to /root/SaitamaRobot/SaitamaRobot
-COPY ./SaitamaRobot/sample_config.py ./SaitamaRobot/config.py* /root/SaitamaRobot/SaitamaRobot/
+COPY ./Djs-Moderation-Bot/config.js* /root/Djs-Moderation-Bot/
+COPY ./Djs-Moderation-Bot/owner.json* /root/Djs-Moderation-Bot/
+COPY ./Djs-Moderation-Bot/env* /root/Djs-Moderation-Bot/
 
 ENV PATH="/home/bot/bin:$PATH"
 
