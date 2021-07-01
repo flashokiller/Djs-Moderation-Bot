@@ -52,3 +52,4 @@
 
 # Contributors:
  * [Felix_PlaYz](https://github.com/gtagamermods) - Code and Commands
+  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/flashokiller/Djs-Moderation-Bot)
