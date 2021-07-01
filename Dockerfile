@@ -66,7 +66,7 @@ RUN npm install --upgrade npm
 #Copy config file to /root/SaitamaRobot/SaitamaRobot
 COPY ./Djs-Moderation-Bot/config.js* /root/Djs-Moderation-Bot/
 COPY ./Djs-Moderation-Bot/owner.json* /root/Djs-Moderation-Bot/
-COPY ./Djs-Moderation-Bot/env* /root/Djs-Moderation-Bot/
+COPY ./Djs-Moderation-Bot/.env* /root/Djs-Moderation-Bot/
 
 ENV PATH="/home/bot/bin:$PATH"
 
